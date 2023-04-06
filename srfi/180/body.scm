@@ -1,3 +1,13 @@
+(define-syntax assume
+  (syntax-rules ()
+    ((assume expression message ...)
+     (begin
+       (unless expression
+	 (error "invalid assumption" 'expression `(,message ...)))
+       expression))
+    ((assume . _)
+     (syntax-error "invalid assume syntax"))))
+
 (define (pk . args)
   (write args)
   (newline)
