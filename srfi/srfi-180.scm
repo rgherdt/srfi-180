@@ -18,7 +18,6 @@
 	  (scheme case-lambda)
 	  (scheme char)
 	  (scheme write)
-	  (rapid assume)
 	  (only (srfi srfi-60) arithmetic-shift bitwise-ior))
 
     (define (%read-error? x)

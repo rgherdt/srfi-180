@@ -43,6 +43,6 @@
       (if (null? symbols)
           (exit (if errors? 1 0))
           (if (check-one? library-name (car symbols))
-              (begin (loop (cdr symbols) #f))
+              (loop (cdr symbols) (or errors? #f))
               (loop (cdr symbols) #t))))
     (check-one? library-name (string->symbol (caddr (command-line)))))

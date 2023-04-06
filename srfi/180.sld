@@ -19,7 +19,6 @@
           (scheme char)
           (scheme text)
           (scheme write)
-          (rapid assume)
           (srfi 180 helpers))
 
   (cond-expand ((library (srfi 60))
